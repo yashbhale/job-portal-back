@@ -15,9 +15,12 @@ const PORT = process.env.PORT|| 5001;
 
 // app.use(cors({ origin: 'http://localhost:5173', credentials:true}));
 app.use(cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true
-}));
+    origin: process.env.CLIENT_URL, // must match your deployed frontend URL
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
+  
 
 app.use('/uploads', express.static('uploads'));
 app.use(express.json());
