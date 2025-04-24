@@ -10,8 +10,8 @@ export const createjob = async(req,res)=> {
     try {
         const {title, description,qualification,reqskills,minexp,location,salary,deadline}=req.body;
         const compid=req.id;
-        console.log("Company ID from request:", req.id);        
-        const companyj = await company.findOne({_id:compid});    
+        console.log("Company ID from request:", req.id);
+        const companyj = await company.findOne({_id:compid});
         if(!companyj)
         {
             console.log("error 1")

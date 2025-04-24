@@ -6,7 +6,6 @@ const isAuthenticated= async(req,res,next)=>{
         // console.log("nnnnnnnnnnnnnn",req.cookies); // Log cookies to see if the token is being sent
         // console.log("Request Headers:", req.headers);
         // console.log("Cookies in Request:", req.cookies);
-        console.log(token);
         
         if(!token) {
             console.log("token do not exits")
