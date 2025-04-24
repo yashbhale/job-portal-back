@@ -94,7 +94,7 @@ export const DisplayAllJobs = async (req, res) => {
 export const Userjobs = async (req, res) => {
     console.log("Fetching user jobs...");
 
-    const userid = req.id;
+    const userid = '6807ea7997c2c99e848af685';
     console.log("User ID:", userid);
 
     if (!userid) {
